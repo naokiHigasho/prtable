@@ -1,5 +1,4 @@
-## usersテーブル
-
+## companiesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email         |string|null: false, unique: true|
@@ -15,15 +14,25 @@
 |company_url   |string|                         |
 
 ### Association
-- has_many :stories
-- has_many :albums
+- has_many :users
 - has_many :releases
 - has_many :medias
 
 
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email         |string |null: false, unique: true     |
+|password      |string |null: false                   |
+|name          |string |null: false, unique: true     |
+|company_id    |integer|null: false, foreign_key: true|
+
+### Association
+- has_many :stories
+- has_many :albums
+
 
 ## storiesテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |main_title |string |null: false                   |
@@ -39,26 +48,22 @@
 
 ### Association
 - belongs_to :user
-- has_many :tags, through: :story_tag_relations
+- has_many :story_tags, through: :story_tag_relations
 - has_many :story_tag_relations
 
 
-
 ## story_tag_relationsテーブル
-
 |Column|Type|Options|
 |------|----|-------|
-|story_id |integer|null: false, index: true, foreign_key: true|
-|tag_id   |integer|null: false, index: true, foreign_key: true|
+|story_id       |integer|null: false, index: true, foreign_key: true|
+|story_tag_id   |integer|null: false, index: true, foreign_key: true|
 
 ### Association
 - belongs_to :story
-- belongs_to :tag
+- belongs_to :story_tag
 
 
-
-## tagsテーブル
-
+## story_tagsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string |null: false, unique: true|
@@ -68,9 +73,7 @@
 - has_many :story_tag_relations
 
 
-
 ## albumsテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |image  |string |null: false                   |
@@ -79,31 +82,48 @@
 
 ### Association
 - belongs_to :user
+- has_many :album_tags, through: :album_tag_relations
+- has_many :album_tag_relations
 
+
+## album_tag_relationsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|album_id       |integer|null: false, index: true, foreign_key: true|
+|album_tag_id   |integer|null: false, index: true, foreign_key: true|
+
+### Association
+- belongs_to :album
+- belongs_to :album_tag
+
+
+## album_tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string |null: false, unique: true|
+
+### Association
+- has_many :albums, through: :album_tag_relations
+- has_many :album_tag_relations
 
 
 ## releasesテーブル
-
 |Column|Type|Options|
 |------|----|-------|
-|date   |string |null: false                   |
-|text   |string |null: false                   |
-|url    |string |null: false                   |
-|user_id|integer|null: false, foreign_key: true|
+|title          |string  |null: false                   |
+|url            |string  |null: false                   |
+|company_id     |integer |null: false, foreign_key: true|
 
 ### Association
-- belongs_to :user
-
+- belongs_to :company
 
 
 ## mediasテーブル
-
 |Column|Type|Options|
 |------|----|-------|
-|date   |string |null: false                   |
-|text   |string |null: false                   |
-|url    |string |null: false                   |
-|user_id|integer|null: false, foreign_key: true|
+|title          |string  |null: false                   |
+|url            |string  |null: false                   |
+|company_id     |integer |null: false, foreign_key: true|
 
 ### Association
-- belongs_to :user
+- belongs_to :company
