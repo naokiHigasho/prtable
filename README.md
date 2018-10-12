@@ -38,12 +38,7 @@
 |main_title |string |null: false                   |
 |main_copy  |string |null: false                   |
 |main_image |string |null: false                   |
-|sub_title01|string |                              |
-|sub_image01|string |                              |
-|sub_body01 |text   |                              |
-|sub_title02|string |                              |
-|sub_image02|string |                              |
-|sub_body02 |text   |                              |
+|content    |text   |null: false                   |
 |user_id    |integer|null: false, foreign_key: true|
 
 ### Association
