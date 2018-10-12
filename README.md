@@ -1,24 +1,124 @@
-# README
+## companiesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email         |string|null: false, unique: true|
+|password      |string|null: false              |
+|name          |string|                         |
+|logo          |string|                         |
+|image         |string|                         |
+|description   |text  |                         |
+|representative|string|                         |
+|establishment |string|                         |
+|address       |string|                         |
+|vision        |text  |                         |
+|company_url   |string|                         |
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Association
+- has_many :users
+- has_many :releases
+- has_many :medias
 
-Things you may want to cover:
 
-* Ruby version
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email         |string |null: false, unique: true     |
+|password      |string |null: false                   |
+|name          |string |null: false, unique: true     |
+|company_id    |integer|null: false, foreign_key: true|
 
-* System dependencies
+### Association
+- has_many :stories
+- has_many :albums
 
-* Configuration
 
-* Database creation
+## storiesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|main_title |string |null: false                   |
+|main_copy  |string |null: false                   |
+|main_image |string |null: false                   |
+|content    |text   |null: false                   |
+|user_id    |integer|null: false, foreign_key: true|
 
-* Database initialization
+### Association
+- belongs_to :user
+- has_many :story_tags, through: :story_tag_relations
+- has_many :story_tag_relations
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## story_tag_relationsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|story_id       |integer|null: false, index: true, foreign_key: true|
+|story_tag_id   |integer|null: false, index: true, foreign_key: true|
 
-* Deployment instructions
+### Association
+- belongs_to :story
+- belongs_to :story_tag
 
-* ...
+
+## story_tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string |null: false, unique: true|
+
+### Association
+- has_many :stories, through: :story_tag_relations
+- has_many :story_tag_relations
+
+
+## albumsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image  |string |null: false                   |
+|text   |string |                              |
+|user_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- has_many :album_tags, through: :album_tag_relations
+- has_many :album_tag_relations
+
+
+## album_tag_relationsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|album_id       |integer|null: false, index: true, foreign_key: true|
+|album_tag_id   |integer|null: false, index: true, foreign_key: true|
+
+### Association
+- belongs_to :album
+- belongs_to :album_tag
+
+
+## album_tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string |null: false, unique: true|
+
+### Association
+- has_many :albums, through: :album_tag_relations
+- has_many :album_tag_relations
+
+
+## releasesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title          |string  |null: false                   |
+|url            |string  |null: false                   |
+|company_id     |integer |null: false, foreign_key: true|
+
+### Association
+- belongs_to :company
+
+
+## mediasテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title          |string  |null: false                   |
+|url            |string  |null: false                   |
+|company_id     |integer |null: false, foreign_key: true|
+
+### Association
+- belongs_to :company
