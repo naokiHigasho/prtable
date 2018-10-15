@@ -1,0 +1,85 @@
+.side-contents{
+  float: right;
+  width: 310px;
+  .side-content-box{
+    background-color: $white;
+    color:$gray;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+  .side-content-title{
+    color: $gray-title;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 18px 0  30px 18px;
+  }
+  .side-more-link{
+    @include hover-button-green;
+    @include link-btn;
+    border-top: 1px solid $gray-light;
+    color:$gray;
+    line-height: 38px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .side-stories{
+    padding-bottom: 18px;
+    .side-story-box{
+      @include clearfix;
+      @include hoverground;
+      height: 90px;
+      margin: 0 0 18px 18px;
+      position: relative;
+      width: 274px;
+      &__image{
+        float: left;
+        height: 90px;
+        width: 90px;
+      }
+      &__info{
+        float: right;
+        height: 90px;
+        width: 174px;
+        &--text{
+          line-height: 1.5;
+          text-align: justify;
+        }
+        &--company-name{
+          font-size: 1.1rem;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .side-topics-lists{
+    @include clearfix;
+    padding-left: 18px;
+    &__list{
+      float: left;
+      padding-bottom: 10px;
+      width: 137px;
+      a{
+        @include hover-text-green;
+        color:$gray;
+        text-decoration: none;
+      }
+    }
+  }
+  .side-company__link{
+    @include clearfix;
+    margin-bottom: 20px;
+    text-decoration: none;
+    &--image{
+      float: left;
+      height: 40px;
+      padding: 0 18px 10px;
+      width:40px;
+    }
+    &--text{
+      @include hover-text-green;
+      color:$gray;
+      float: left;
+      line-height: 40px;
+    }
+  }
+}

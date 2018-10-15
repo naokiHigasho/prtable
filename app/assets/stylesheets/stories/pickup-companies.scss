@@ -1,0 +1,50 @@
+.pickup-companies{
+  margin-bottom: 60px;
+  .pickup-companies-slider{
+    box-sizing: border-box;
+    height: 170px;
+    padding: 0 26px;
+    width: 868px;
+    div {
+      .pickup-company{
+        @include hoverground;
+        background-color: $white;
+        box-sizing: border-box;
+        box-shadow:0 1px 1px 1px rgba(0,0,0,0.2);
+        height: 170px;
+        margin: 0 15px;
+        position: relative;
+        width:242px;
+        &__image{
+          height: 130px;
+          width: 100%;
+        }
+        &__text{
+          color:$gray-dark;
+          font-size: 1.1rem;
+          font-weight: bold;
+          line-height: 40px;
+          padding-left: 60px;
+        }
+        &__logo{
+          box-shadow:0 1px 1px 1px rgba(0,0,0,0.2);
+          height: 40px;
+          position: absolute;
+          bottom: 5px;
+          left:10px;
+          width: 40px;
+        }
+      }
+    }
+    .slick-prev::before, .slick-next::before {
+      color: $gray;
+      font-size: 25px;
+    }
+    .slick-next {
+      right: 0px;
+    }
+    .slick-prev {
+      left: 0px;
+    }
+  }
+}

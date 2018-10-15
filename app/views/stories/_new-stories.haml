@@ -1,0 +1,17 @@
+.new-stories-section
+  .main-contents-title
+    %h2
+      = fa_icon "file", class: "icon"
+      %span 新着ストーリー
+  .new-stories
+    - 15.times do
+      .story
+        = link_to "#" do
+          .hoverground
+        = image_tag("side_story.jpg", class: "story__image")
+        .story__title-box
+          %p.story__title-box--text 「IT × ものづくり」の最新形を追及するーーある靴職人の真の想い
+        %p.story__company-name 株式会社ミリメーター
+  = link_to "#", class: "new-story-button" do
+    = fa_icon "arrow-circle-right"
+    新着ストーリー一覧

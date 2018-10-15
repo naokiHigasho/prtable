@@ -1,0 +1,15 @@
+.featured-stories
+  .featured-stories-slider
+    - 3.times do
+      %div
+        .featured-story
+          = link_to "#" do
+            .hoverground
+          = image_tag("water.jpg", class: "featured-story__image")
+          %p.featured-story__title
+            Engineer
+            %br
+            and
+            %br
+            Company
+          %p.featured-story__text SEPTEMBER FEATURED STORIES

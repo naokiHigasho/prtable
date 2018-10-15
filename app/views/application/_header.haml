@@ -1,0 +1,16 @@
+.header
+  .header-inner
+    = link_to "#" do
+      = image_tag("logo.svg", class: "header-logo")
+    %ul.header-nav
+      %li.header-nav__list
+        = link_to 'ストーリー', "#"
+      %li.header-nav__list
+        = link_to '企業', "#"
+      %li.header-nav__list
+        = link_to 'トピック', "#"
+      %li.header-nav__list
+        = link_to '資料請求/お問い合わせ', "#"
+    .header-buttons
+      = fa_icon "search", class: "header-buttons__search-btn"
+      = link_to 'ログイン / 新規登録', "#", class: "header-buttons__login-btn"

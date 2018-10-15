@@ -1,0 +1,33 @@
+.footer
+  .footer-inner
+    %ul.footer-menu
+      %li.footer-menu__list
+        = link_to '新着一覧', "#"
+      %li.footer-menu__list
+        = link_to 'トピック一覧', "#"
+      %li.footer-menu__list
+        = link_to 'ストーリー掲載企業一覧', "#"
+    %ul.footer-menu
+      %li.footer-menu__list
+        = link_to 'よくある質問', "#"
+      %li.footer-menu__list
+        = link_to '利用規約', "#"
+      %li.footer-menu__list
+        = link_to 'プライバシーポリシー', "#"
+      %li.footer-menu__list
+        = link_to '運営会社', "#"
+      %li.footer-menu__list
+        = link_to '資料請求/お問い合わせ', "#"
+      %li.footer-menu__list
+        = link_to 'PR Table Community', "http://blog.pr-table.com", target: "blank"
+    %ul.social-icons
+      %li.social-icons__list
+        = link_to "https://www.facebook.com/prtable", target: "blank" do
+          = fa_icon "facebook"
+      %li.social-icons__list
+        = link_to "https://twitter.com/PR_Table", target: "blank" do
+          = fa_icon "twitter"
+      %li.social-icons__list
+        = link_to "https://www.pr-table.com/", target: "blank" do
+          = fa_icon "rss"
+    %p ©PR Table Inc.
