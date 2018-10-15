@@ -1,2 +1,14 @@
 @import "./config/reset";
 @import "./config/colors";
+@import "./mixin/base";
+@import "./application/base";
+@import "./application/header";
+@import "./application/footer";
+@import "./stories/featured-stories";
+@import "./stories/index";
+@import "./stories/new-stories";
+@import "./stories/pickup-companies";
+@import "./stories/side-contents";
+@import "font-awesome";
+@import 'slick';
+@import 'slick-theme';

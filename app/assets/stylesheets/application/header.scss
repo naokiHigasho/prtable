@@ -1,0 +1,58 @@
+.header{
+  background-color: $white;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+  position: relative;
+  width: 100vw;
+  z-index: 9999;
+  .header-inner{
+    background-color: $white;
+    box-sizing: border-box;
+    height: 60px;
+    margin: auto;
+    width: 1200px;
+    .header-logo{
+      float: left;
+      height: 60px;
+      padding-right: 150px;
+      width: 95px;
+    }
+    .header-nav{
+      float:left;
+      &__list{
+        display: inline;
+        a{
+          @include hover-text-green;
+          color:$gray;
+          display: inline-block;
+          font-size: 1.2rem;
+          font-weight: bold;
+          line-height: 60px;
+          padding: 0 50px 0 0;
+          text-decoration: none;
+        }
+      }
+    }
+    .header-buttons{
+      float: right;
+      height: 32px;
+      margin-top: 14px;
+      &__login-btn{
+        @include hover-button-green;
+        @include link-btn;
+        border:1px solid $gray-light;
+        border-radius: 20px;
+        color:$gray;
+        float: right;
+        font-size: 1.1rem;
+        line-height: 30px;
+        padding: 0 25px;
+      }
+      &__search-btn{
+        color:$gray-light;
+        float: right;
+        font-size: 24px;
+        padding: 4px 0 0 15px;
+      }
+    }
+  }
+}

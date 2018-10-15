@@ -1,0 +1,30 @@
+.side-contents
+  .side-stories.side-content-box
+    %h2.side-content-title 注目ストーリー
+    - 3.times do
+      .side-story-box
+        = link_to "#" do
+          .hoverground
+        = image_tag("side_story.jpg", class: "side-story-box__image")
+        .side-story-box__info
+          %p.side-story-box__info--text 「IT × ものづくり」の最新形を追及するーーある靴職人の真の想い
+          %p.side-story-box__info--company-name 株式会社ミリメーター
+  .side-topics.side-content-box
+    %h2.side-content-title おすすめトピック
+    %ul.side-topics-lists
+      - 16.times do
+        %li.side-topics-lists__list
+          = link_to "ビジョン・ミッション", "#"
+    = link_to "#", class: "side-more-link" do
+      = fa_icon "chevron-right"
+      トピック一覧
+  .side-companies.side-content-box
+    %h2.side-content-title ストーリー掲載企業
+    - 5.times do
+      .side-company
+        = link_to "#", class: "side-company__link" do
+          = image_tag("company_logo.jpg", class: "side-company__link--image")
+          %p.side-company__link--text 株式会社ネットプロテクションズ
+    = link_to "#", class: "side-more-link" do
+      = fa_icon "chevron-right"
+      ストーリー掲載

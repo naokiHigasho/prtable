@@ -1,0 +1,49 @@
+.new-stories-section{
+  .new-stories{
+    @include clearfix;
+    margin-bottom: 50px;
+    .story{
+      @include hoverground;
+      background-color: $white;
+      box-sizing: border-box;
+      color:$gray-dark;
+      float: left;
+      height: 290px;
+      margin: 0 21px 21px 0;
+      padding: 20px;
+      position: relative;
+      width: 275px;
+      &__image{
+        height: 150px;
+        margin-bottom: 15px;
+        width: 235px;
+      }
+      &__title-box{
+        height: 70px;
+        width: 235px;
+        &--text{
+          color:$gray-dark;
+          font-size: 1.3rem;
+          line-height: 1.5;
+          text-align: justify;
+        }
+      }
+      &__company-name{
+        font-size: 1.1rem;
+        line-height: 1;
+        overflow: hidden;
+      }
+    }
+  }
+  .new-story-button{
+    @include hover-button-green;
+    @include link-btn;
+    background-color: $white;
+    border-radius: 30px;
+    color:$gray;
+    font-size: 1.5rem;
+    line-height: 43px;
+    margin:40px auto 0;
+    width: 250px;
+  }
+}

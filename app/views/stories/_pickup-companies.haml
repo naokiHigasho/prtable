@@ -1,0 +1,14 @@
+.pickup-companies
+  .main-contents-title
+    %h2
+      = fa_icon "arrow-up", class: "icon"
+      %span ストーリー更新中
+  .pickup-companies-slider
+    - 6.times do
+      %div
+        .pickup-company
+          = link_to "#" do
+            .hoverground
+          = image_tag("side_story.jpg", class: "pickup-company__image")
+          %p.pickup-company__text 株式会社ミリメーター
+          = image_tag("company_logo.jpg", class: "pickup-company__logo")
