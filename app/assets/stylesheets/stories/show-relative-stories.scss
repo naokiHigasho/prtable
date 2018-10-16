@@ -1,0 +1,40 @@
+.show-relative-stories{
+  margin-bottom: 40px;
+  .relative-stories-title{
+    padding: 0 18px;
+  }
+  .stories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left:18px;
+    .story{
+      @include hoverground;
+      color:$gray-dark;
+      height: 250px;
+      margin: 0 18px 20px 0;
+      position: relative;
+      flex-basis: 188px;
+      &__image{
+        height: 150px;
+        margin-bottom: 15px;
+        width: 188px;
+      }
+      &__text-box{
+        height: 70px;
+        width: 188px;
+        &--text{
+          font-size: 1.3rem;
+          font-weight: bold;
+          line-height: 1.5;
+          text-align: justify;
+        }
+      }
+      &__company-name{
+        font-size: 1.1rem;
+        line-height: 1;
+        overflow: hidden;
+      }
+    }
+  }
+}

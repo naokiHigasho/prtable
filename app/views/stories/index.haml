@@ -1,6 +1,7 @@
-= render 'stories/featured-stories-slider'
-.contents-wrapper
-  .main-contents
-    = render 'stories/pickup-companies'
-    = render 'stories/new-stories'
-  = render 'stories/side-contents'
+.container.bg-gray
+  = render 'stories/featured-stories-slider'
+  .contents-wrapper.clearfix
+    .main-contents
+      = render 'stories/pickup-companies'
+      = render 'stories/new-stories'
+    = render 'stories/side-contents'

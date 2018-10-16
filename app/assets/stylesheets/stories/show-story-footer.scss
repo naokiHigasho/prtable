@@ -1,0 +1,45 @@
+.show-story-footer{
+  box-sizing:border-box;
+  margin-bottom: 40px;
+  padding: 0 18px;
+  width: 842px;
+  .social-lists{
+    text-align: center;
+    &__list{
+      display: inline-block;
+    }
+    &__link{
+      @include link-btn;
+      border-radius: 100%;
+      color:$white;
+      font-size: 20px;
+      line-height: 40px;
+      margin: 0 10px;
+      width: 40px;
+      img{
+        height: 13px;
+        width: 19px;
+      }
+    }
+  }
+  .article-info{
+    @include clearfix;
+    font-size: 1.3rem;
+    .article-info-lists{
+      text-align: center;
+      &__list{
+        float: left;
+        margin-right: 20px;
+      }
+      &__link{
+        color:$gray;
+        text-decoration: none;
+      }
+    }
+    .date{
+      color: $gray;
+      float: right;
+      font-size: 1.2rem;
+    }
+  }
+}

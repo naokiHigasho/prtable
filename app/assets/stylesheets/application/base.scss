@@ -1,7 +1,88 @@
 html{
   font-size: 9px;
 }
-
-body{
+.contents-wrapper{
+  box-sizing: border-box;
+  margin: auto;
+  padding: 30px 0 150px 0;
+  width: 1200px;
+}
+.clearfix {
+  &::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+.bg-gray{
   background-color: $gray-bg;
+}
+.bg-white{
+  background-color: $white;
+}
+.bg-facebook{
+  &:hover{
+    opacity: 0.5;
+    transition:0.3s;
+  }
+  background-color: #3b5998;
+}
+.bg-twitter{
+  &:hover{
+    opacity: 0.5;
+    transition:0.3s;
+  }
+  background-color: #4fd5f8;
+}
+.bg-hatena{
+  &:hover{
+    opacity: 0.5;
+    transition:0.3s;
+  }
+  background-color: #008fde;
+}
+.bg-eight{
+  &:hover{
+    opacity: 0.5;
+    transition:0.3s;
+  }
+  background-color: $white;
+}
+.bg-pocket{
+  &:hover{
+    opacity: 0.5;
+    transition:0.3s;
+  }
+  background-color: #ee4056;
+}
+.outline-1px-gray{
+  outline: 1px solid $gray;
+  outline-offset: -1px;
+}
+.border-1px-gray{
+  border: 1px solid $gray;
+}
+.company-info-btn-blue{
+  &:hover{
+    background-color: #124d7c;
+    box-shadow: 0 3px 0 0 #124d7c;
+  }
+  background-color: #40a0b8;
+  box-shadow: 0 3px 0 0 #124d7c;
+}
+.company-info-btn-yellow{
+  &:hover{
+    background-color: #a88300;
+    box-shadow: 0 3px 0 0 #a88300;
+  }
+  background-color: #e4c241;
+  box-shadow: 0 3px 0 0 #a88300;
+}
+.company-info-btn-red{
+  &:hover{
+    background-color: #663625;
+    box-shadow: 0 3px 0 0 #663625;
+  }
+  background-color: #c86b4a;
+  box-shadow: 0 3px 0 0 #663625;
 }

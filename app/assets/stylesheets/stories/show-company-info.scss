@@ -1,0 +1,97 @@
+.show-company-info{
+  background-color: $white;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+  height: 475px;
+  margin: 0 auto 40px;
+  width: 806px;
+  .top-box{
+    height: 200px;
+    margin-bottom: 20px;
+    position: relative;
+    &__image{
+      height: 200px;
+      width: 806px;
+    }
+  }
+  .info-wrapper{
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    width: 770px;
+    .info-buttons{
+      display: flex;
+      justify-content: space-between;
+      .info-button{
+        &__link{
+          border-radius: 5px;
+          color: $white;
+          display: inline-block;
+          font-size: 1.6rem;
+          height: 45px;
+          line-height: 45px;
+          text-align: center;
+          text-decoration: none;
+          width: 244px;
+        }
+      }
+    }
+    .company-head{
+      @include clearfix;
+      padding-bottom: 18px;
+      &__link{
+        color: $white;
+        text-decoration: none;
+      }
+      &__logo{
+        border-radius: 2px;
+        float: left;
+        height: 40px;
+        margin-right:15px;
+        width: 40px;
+      }
+      &__name{
+        float: left;
+        font-size: 2rem;
+        line-height: 40px;
+      }
+      &__text{
+        float: right;
+        font-size: 1.4rem;
+        line-height: 1;
+        padding-top: 25px;
+      }
+    }
+  }
+  .stories{
+    display: flex;
+    padding-left:18px;
+    .story{
+      @include hoverground;
+      color:$gray-dark;
+      height: 250px;
+      margin: 0 18px 20px 0;
+      position: relative;
+      flex-basis: 244px;
+      &__image{
+        height: 150px;
+        margin-bottom: 10px;
+        width: 244px;
+      }
+      &__text-box{
+        height: 55px;
+        width: 244px;
+        &--text{
+          font-size: 1.3rem;
+          font-weight: bold;
+          line-height: 1.8;
+          text-align: justify;
+        }
+      }
+      &__company-name{
+        font-size: 1.1rem;
+        line-height: 1;
+        overflow: hidden;
+      }
+    }
+  }
+}
