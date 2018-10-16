@@ -1,0 +1,31 @@
+.show-company-info
+  .top-box
+    = image_tag("water.jpg", class: "top-box__image")
+    .info-wrapper
+      .company-head
+        = link_to "#", class: "company-head__link" do
+          = image_tag("miri-logo.jpg", class: "company-head__logo")
+          %p.company-head__name 株式会社ミリメーター
+          %p.company-head__text 》この会社について
+      %ul.info-buttons
+        %li.info-button
+          = link_to "#", target: "blank",class: "info-button__link company-info-btn-blue" do
+            働きたい
+            = fa_icon "building-o lg"
+        %li.info-button
+          = link_to "#", target: "blank",class: "info-button__link company-info-btn-yellow" do
+            事業を知る
+            = fa_icon "line-chart lg"
+        %li.info-button
+          = link_to "#", target: "blank",class: "info-button__link company-info-btn-red" do
+            取材したい
+            = fa_icon "pencil lg"
+  .stories
+    - 3.times do
+      .story
+        = link_to "#" do
+          .hoverground
+        = image_tag("side_story.jpg", class: "story__image")
+        .story__text-box
+          %p.story__text-box--text 「IT × ものづくり」の最新形を追及するーーある靴職人の真の想い
+        %p.story__company-name 株式会社ミリメーター

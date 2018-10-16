@@ -1,0 +1,22 @@
+.show-story-article{
+  box-sizing:border-box;
+  margin-top: 60px;
+  padding: 0 18px;
+  width: 842px;
+  .topics{
+    margin-bottom: 40px;
+    &__title{
+      margin-bottom: 30px;
+    }
+    &__image{
+      height:540px;
+      width: 806px;
+    }
+    &__image-description{
+      text-align: center;
+    }
+    &__body{
+      margin-top: 40px;
+    }
+  }
+}

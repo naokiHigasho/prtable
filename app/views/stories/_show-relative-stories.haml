@@ -1,0 +1,24 @@
+.show-relative-stories
+  .relative-stories-title
+    %h3 関連ストーリー
+  .stories
+    - 8.times do
+      .story
+        = link_to "#" do
+          .hoverground
+        = image_tag("side_story.jpg", class: "story__image")
+        .story__text-box
+          %p.story__text-box--text 「IT × ものづくり」の最新形を追及するーーある靴職人の真の想い
+        %p.story__company-name 株式会社ミリメーター
+.show-relative-stories
+  .relative-stories-title
+    %h3 注目ストーリー
+  .stories
+    - 4.times do
+      .story
+        = link_to "#" do
+          .hoverground
+        = image_tag("side_story.jpg", class: "story__image")
+        .story__text-box
+          %p.story__text-box--text 「IT × ものづくり」の最新形を追及するーーある靴職人の真の想い
+        %p.story__company-name 株式会社ミリメーター

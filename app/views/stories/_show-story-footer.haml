@@ -1,0 +1,24 @@
+.show-story-footer
+  %ul.social-lists
+    %li.social-lists__list
+      = link_to "#", target: "blank",class: "social-lists__link bg-facebook" do
+        = fa_icon "facebook"
+    %li.social-lists__list
+      = link_to "#", target: "blank",class: "social-lists__link bg-eight border-1px-gray" do
+        = image_tag("eight.png")
+    %li.social-lists__list
+      = link_to "#", target: "blank", class: "social-lists__link bg-twitter" do
+        = fa_icon "twitter"
+    %li.social-lists__list
+      = link_to "#", target: "blank", class: "social-lists__link bg-hatena" do
+        = image_tag("hatena.png")
+    %li.social-lists__list
+      = link_to "#", target: "blank", class: "social-lists__link bg-pocket" do
+        = image_tag("pocket.png")
+  %hr
+  .article-info
+    %ul.article-info-lists
+      - 3.times do
+        %li.article-info-lists__list
+          = link_to "創業秘話 ","#", target: "blank",class: "article-info-lists__link"
+    %p.date 2018.09.19

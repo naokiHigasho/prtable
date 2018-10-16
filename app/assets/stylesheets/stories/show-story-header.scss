@@ -1,0 +1,45 @@
+.show-story-header{
+  box-sizing:border-box;
+  padding: 0 18px;
+  width: 842px;
+  .author-info{
+    text-align: center;
+    &__link{
+      margin:0 auto;
+      text-decoration: none;
+    }
+    &__logo{
+      height:80px;
+      width: 85px;
+    }
+    &__text{
+      color:$gray;
+      font-size: 1.4rem;
+    }
+  }
+  .main-title{
+    margin:40px 0 40px;
+    text-align: center;
+  }
+  .intro{
+    margin-bottom: 40px;
+  }
+  .social-lists{
+    @include clearfix;
+    &__list{
+      float: left;
+      text-align: center;
+    }
+    &__link{
+      @include link-btn;
+      color:$white;
+      font-size: 20px;
+      line-height: 40px;
+      width: 161px;
+      img{
+        height: 13px;
+        width: 19px;
+      }
+    }
+  }
+}

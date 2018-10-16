@@ -1,0 +1,23 @@
+.show-story-header
+  .author-info
+    = link_to "#", class: "author-info__link" do
+      = image_tag("miri-logo.jpg", class: "author-info__logo")
+      %p.author-info__text 株式会社ミリメーター
+  %h2.main-title 「IT × ものづくり」の最新形を追及するーーある靴職人の真の想い
+  %p.intro.article-text 「未来のモノづくりで1ミリの幸せを提供します」をコンセプトに、フルオーダーメイドの婦人靴を製造・販売する株式会社ミリメーター。エンジニア・デザイナー・靴づくりのベテラン職人など、幅広い領域のスペシャリスト陣を束ねる代表取締役社長の粕谷孝史が、当社の歩みとサービスに対する想いを語ります。
+  %ul.social-lists
+    %li.social-lists__list
+      = link_to "#", target: "blank",class: "social-lists__link bg-facebook" do
+        = fa_icon "facebook"
+    %li.social-lists__list
+      = link_to "#", target: "blank",class: "social-lists__link bg-eight outline-1px-gray" do
+        = image_tag("eight.png")
+    %li.social-lists__list
+      = link_to "#", target: "blank", class: "social-lists__link bg-twitter" do
+        = fa_icon "twitter"
+    %li.social-lists__list
+      = link_to "#", target: "blank", class: "social-lists__link bg-hatena" do
+        = image_tag("hatena.png")
+    %li.social-lists__list
+      = link_to "#", target: "blank", class: "social-lists__link bg-pocket" do
+        = image_tag("pocket.png")
